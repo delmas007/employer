@@ -52,7 +52,6 @@ public class LoginContrller implements Serializable {
     }
 
     public String login() {
-        // Vérifier les informations de connexion pour les employés
         List<Employe> employes = employeService.getAllEmployes();
         for (Employe employe : employes) {
             if (employe.getUsername().equals(username) && employe.getPassword().equals(password)) {
@@ -62,7 +61,6 @@ public class LoginContrller implements Serializable {
             }
         }
 
-        // Vérifier les informations de connexion pour les responsables
         List<Responsable> responsables = responsableService.findAll();
         for (Responsable responsable : responsables) {
             if (responsable.getNom().equals(username) && responsable.getPassword().equals(password)) {

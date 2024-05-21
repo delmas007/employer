@@ -89,19 +89,19 @@ public class Employe {
     }
 
     public String getPassword() {
-        return password;  // Getter pour le mot de passe
+        return password;
     }
 
     public void setPassword(String password) {
-        this.password = password;  // Setter pour le mot de passe
+        this.password = password;
     }
 
     public String getUsername() {
-        return username;  // Getter pour le nom d'utilisateur
+        return username;
     }
 
     public void setUsername(String username) {
-        this.username = username;  // Setter pour le nom d'utilisateur
+        this.username = username;
     }
 
     public Responsable getResponsable() {
