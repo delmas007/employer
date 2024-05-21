@@ -37,10 +37,6 @@
                         <p:column headerText="Statut">
                             <h:outputText value="#{conge.statut}" />
                         </p:column>
-                        <p:column headerText="Actions" style="text-align: center;">
-                            <p:commandButton value="Approuver" action="#{congeController.approuverConge(conge.idConge)}" update=":congeListForm:congeTable" rendered="#{conge.statut eq 'EN ATTENTE'}" />
-                            <p:commandButton value="Rejeter" action="#{congeController.rejeterConge(conge.idConge)}" update=":congeListForm:congeTable" rendered="#{conge.statut eq 'EN ATTENTE'}" />
-                        </p:column>
                     </p:dataTable>
                 </p:panel>
             </h:form>
