@@ -33,7 +33,6 @@ public class CongeService {
             conge.setStatut("Approuvé");
             update(conge);
 
-            emailService.sendEmail(conge.getEmploye().getCourriel(), "Demande de congé approuvée", "Votre demande de congé a été approuvée.");
             System.out.println("Conge approuvé : " + congeId);
         } else {
             System.out.println("Conge non trouvé : " + congeId);
@@ -48,7 +47,6 @@ public class CongeService {
         if (conge != null) {
             conge.setStatut("Rejeté");
             update(conge);
-            emailService.sendEmail(conge.getEmploye().getCourriel(), "Demande de congé rejetée", "Votre demande de congé a été rejetée.");
             System.out.println("Conge rejeté : " + congeId);
         } else {
             System.out.println("Conge non trouvé : " + congeId);

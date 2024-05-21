@@ -25,7 +25,7 @@ public class CongeController implements Serializable {
 
     @Inject
     private EmployeService employeService;
-
+    private Conge selectedConge = new Conge();
     private Conge newConge = new Conge();
     private List<Conge> pendingConges;
 
@@ -105,7 +105,13 @@ public class CongeController implements Serializable {
     public Conge getNewConge() {
         return newConge;
     }
+    public Conge getSelectedConge() {
+        return selectedConge;
+    }
 
+    public void setSelectedConge(Conge selectedConge) {
+        this.selectedConge = selectedConge;
+    }
     public void setNewConge(Conge newConge) {
         this.newConge = newConge;
     }
